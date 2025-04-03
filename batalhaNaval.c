@@ -3,8 +3,6 @@
 // Desafio Batalha Naval - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
 // Siga os comentários para implementar cada parte do desafio.
-
-int main() {
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
@@ -36,5 +34,108 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
-    return 0;
-}
+  
+    #include <stdio.h>
+
+    int main(){
+    
+        char linha[10]= {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+    
+        // 1. CRIANDO O TABULEIRO (MATRI Z 10X10)
+    
+        int tabuleiro[10][10];
+    
+        for (int i = 0; i < 10; i++){
+    
+            for (int j = 0; j < 10; j++){
+    
+                tabuleiro[i][j] = 0;
+    
+            }
+    
+         }
+    
+         // Exibindo o tabuleiro
+    
+        printf("TABULEIRO BATALHA NAVAL\n");
+    
+        printf("  ");
+    
+        for (int j = 0; j < 10; j++){
+    
+            printf("%c ", linha[j]); //imprime os números das colunas
+    
+        }
+    
+          printf("\n");
+    
+          //Navios na vertical
+    
+          for (int i = 1; i < 4; i++){
+    
+            tabuleiro[i][1] = 3;
+    
+          }
+    
+          //Navios na Horinzontal
+    
+          for (int j = 4; j < 7; j++){
+    
+            tabuleiro[4][j] = 3;
+    
+          }
+
+          //Navios na diagonal
+
+
+                for (int j = 9; j < 10; j++){
+    
+                    tabuleiro[0][j] = 3;
+                }
+                for (int j = 8; j < 9; j++){
+    
+                    tabuleiro[1][j] = 3;
+                }
+                for (int j = 7; j < 8; j++){
+    
+                    tabuleiro[2][j] = 3;
+                }
+                for (int j = 0; j <= 0; j++){
+    
+                    tabuleiro[9][j] = 3;
+                }
+                for (int j = 1; j <= 1; j++){
+    
+                    tabuleiro[8][j] = 3;
+                }
+                for (int j = 2; j <= 2; j++){
+    
+                    tabuleiro[7][j] = 3;
+                }
+          //linhas numeradas
+    
+          for (int i = 0; i < 10; i++){
+    
+            printf("%2d ", i + 1); //número da linha
+    
+            for (int j = 0; j < 10; j++){
+    
+            printf("%d ", tabuleiro[i][j]); // Valor do tabuleiro
+    
+            }
+    
+            printf("\n"); //nova linha da matriz
+    
+          }
+    
+
+    
+        return 0;
+    
+    
+    
+    }
+
+
+
+
